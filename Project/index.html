@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- imposta l'icona del sito -->
+    <link rel="icon" href="img/favicon.PNG" />
+
+    <!-- script per icone -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- script per google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- link css -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/corpo.css" rel="stylesheet" />
+    <link href="css/queries.css" rel="stylesheet" />
+
+    <title>Admin Dashboard</title>
+  </head>
+  <body>
+    <!-- primo pezzo -->
+    <header>
+      <div>Site Administration<strong class="sezione">/Utenti</strong></div>
+      <div class="icone-header">
+        <p>
+          <a href="#" class="link-header"
+            ><ion-icon name="lock-closed-outline"></ion-icon
+          ></a>
+        </p>
+        <p>
+          <a href="#" class="link-header"
+            ><ion-icon name="log-out-outline"></ion-icon
+          ></a>
+        </p>
+      </div>
+    </header>
+
+    <!-- secondo pezzo -->
+    <nav class="nav">
+      <a class="link-refresh" href="#">
+        <div class="img">
+          <img
+            src="https://randomuser.me/api/portraits/women/82.jpg"
+            class="img-profilo"
+            alt="impiegata"
+          />
+        </div>
+        <div class="info-profilo">
+          <p class="welcome">Welcome</p>
+          <p class="nome-profilo"><strong>Sandra Mondaini</strong></p>
+        </div>
+      </a>
+
+      <!-- parte per mobile -->
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </nav>
+
+    <!-- menu di selezione a sx -->
+    <section class="menu">
+      <ul class="menu-sx">
+        <li class="prima-voce attivo">
+          <ion-icon name="desktop-outline" class="icona-men-sx"></ion-icon
+          ><a href="#" class="link-sx">Utenti</a>
+        </li>
+        <li class="seconda-voce">
+          <ion-icon name="images-outline" class="icona-men-sx"></ion-icon
+          ><a href="#" class="link-sx">Immagini</a>
+        </li>
+        <li class="terza-voce">
+          <ion-icon name="share-outline" class="icona-men-sx"></ion-icon
+          ><a href="#" class="link-sx">Post</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- parte interna del sito, lista utenti -->
+    <section class="corpo-sez1">
+      <!-- barra ricerca -->
+      <div class="div-bar-ricerca">
+        <input
+          type="text"
+          class="barra-ricerca"
+          placeholder="Ricerca qui l'utente"
+        />
+      </div>
+
+      <!-- bottone aggiungi -->
+      <a href="#popup2" class="link-bottone-verde">
+        <button class="bottone-aggiungi-utente">
+          <ion-icon name="add-circle-sharp" class="icona-piu"></ion-icon
+          >AGGIUNGI UTENTE
+        </button>
+      </a>
+
+      <!-- lista utenti  -->
+      <ul class="lista-utenti">
+        <div class="nome-sezioni-lista-utenti">
+          <li>ID<ion-icon name="caret-down-outline"></ion-icon></li>
+          <li>Nome e cognome<ion-icon name="caret-down-outline"></ion-icon></li>
+          <li>E-mail<ion-icon name="caret-down-outline"></ion-icon></li>
+          <li>Opzioni<ion-icon name="caret-down-outline"></ion-icon></li>
+        </div>
+      </ul>
+    </section>
+
+    <!-- pop-up per info utenti -->
+    <aside class="overlay" id="popup1">
+      <div class="popup">
+        <div class="menu-popup">
+          <a href="#" class="generale-popup attivo">Generale</a>
+          <a href="#" class="post-popup">Post</a>
+        </div>
+        <a class="close" href="#">&times;</a>
+        <div class="content1">
+          <ul class="lista-dettagli">
+            <li class="li1">ID:</li>
+            <li class="li2">Nome e Cognome:</li>
+            <li class="li3">Email:</li>
+            <li class="li4">Indirizzo:</li>
+            <li class="li5">Telefono:</li>
+            <li class="li6">Sito:</li>
+            <li class="li7">Azienda:</li>
+          </ul>
+        </div>
+        <div class="content2">
+          <ul class="lista-dettagli-post">
+            <li class="lii1">ID:</li>
+            <li class="lii2">Titolo:</li>
+            <li class="lii3">Corpo:</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- pop-up per aggiunta utenti -->
+    <aside class="overlay" id="popup2">
+      <div class="popup due">
+        <h3>Inserisci i dati:</h3>
+        <a class="close" href="#">&times;</a>
+        <div class="content1">
+          <form class="form-aggiunta-utenti">
+            <label for="nomecompleto">Nome e Cognome</label>
+            <input
+              id="nomecompleto"
+              name="nomecompleto"
+              type="text"
+              placeholder="Nome"
+              class="input-popup2"
+              required
+            />
+            <label for="email">E-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="text"
+              placeholder="E-mail"
+              class="input-popup2"
+              required
+            />
+            <label for="indirizzo">Indirizzo</label>
+            <input
+              id="indirizzo"
+              name="indirizzo"
+              type="text"
+              placeholder="Indirizzo"
+              class="input-popup2"
+              required
+            />
+            <label for="telefono">Telefono</label>
+            <input
+              id="telefono"
+              name="telefono"
+              type="number"
+              placeholder="Telefono"
+              class="input-popup2"
+              required
+            />
+            <label for="azienda">Nome azienda</label>
+            <input
+              id="azienda"
+              name="azienda"
+              type="text"
+              placeholder="Nome azienda"
+              class="input-popup2"
+              required
+            />
+            <input type="submit" value="Submit" class="bottone-conferma" />
+          </form>
+        </div>
+      </div>
+    </aside>
+
+    <!-- pop-up per modifica utenti -->
+    <aside class="overlay" id="popup3">
+      <div class="popup tre">
+        <h3>Modifica i dati:</h3>
+        <a class="close" href="#">&times;</a>
+        <div class="content1">
+          <form class="form-modifica">
+            <label for="id">ID</label>
+            <input
+              id="id"
+              name="id"
+              type="number"
+              placeholder="ID"
+              class="input-popup2"
+              required
+            />
+            <label for="nomecompleto">Nome e Cognome</label>
+            <input
+              id="nomecompleto"
+              name="nomecompleto"
+              type="text"
+              placeholder="Nome"
+              class="input-popup2"
+              required
+            />
+            <label for="email">E-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="text"
+              placeholder="E-mail"
+              class="input-popup2"
+              required
+            />
+            <input type="submit" value="Submit" class="bottone-conferma" />
+          </form>
+        </div>
+      </div>
+    </aside>
+
+    <!-- sezione immagini con carosello -->
+    <section class="corpo-sez2">
+      <div class="loading">Loading&#8230;</div>
+      <div class="carousel-container"></div>
+    </section>
+
+    <section class="corpo-sez3">
+      <div class="loading">Loading&#8230;</div>
+      <p class="titolo-sezione">POST DEGLI UTENTI</p>
+      <div class="post-list"></div>
+    </section>
+
+    <script src="javascript/dati-utente.js"></script>
+    <script src="javascript/dati-immagini.js"></script>
+    <script src="javascript/dati-post.js"></script>
+    <script src="javascript/caricamento-DOM.js"></script>
+    <script src="javascript/prima-sezione.js"></script>
+    <script src="javascript/seconda-sezione.js"></script>
+    <script src="javascript/terza-sezione.js"></script>
+    <script src="javascript/script-carosello.js"></script>
+  </body>
+</html>

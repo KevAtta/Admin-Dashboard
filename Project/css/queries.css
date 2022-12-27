@@ -1,0 +1,436 @@
+/* 1200/16 = 75 */
+/* sotto 1200px per tablet (esattamente 1266px) */
+@media only screen and (min-width: 1000px) and (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    grid-template-columns: 22rem 115rem;
+    grid-template-rows: 5rem 13rem 1fr;
+  }
+
+  .nome-sezioni-lista-utenti {
+    display: none;
+  }
+
+  nav {
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+    background-color: #f7ecdebd;
+    grid-column: 1 /-1;
+    color: #000;
+  }
+
+  .info-profilo {
+    display: inline-block;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    font-size: 2.3rem;
+  }
+
+  .img-profilo {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+  }
+
+  .icone-header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding-right: 1.5rem;
+    width: 10rem;
+  }
+
+  .bottone-aggiungi-utente {
+    background-color: green;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 86rem;
+    padding: 1px 10px;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .icona-piu {
+    font-size: 5rem;
+  }
+
+  .utente {
+    background-color: #fff;
+    padding: 2rem;
+    height: 14rem;
+    margin-bottom: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr 30rem 13rem 1fr;
+    column-gap: 15rem;
+    align-items: center;
+
+    border-radius: 2rem;
+
+    cursor: pointer;
+  }
+
+  .placeholder {
+    float: left;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+  }
+
+  .nome {
+    font-size: 2rem;
+    margin: 0 0 0.3rem;
+    font-weight: 600;
+  }
+
+  .email {
+    margin: 0;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+
+  .link-sx {
+    font-size: 3rem;
+  }
+
+  /*******************************************/
+  /* pop-up per info utenti*/
+  /*******************************************/
+  .popup {
+    margin: 10rem auto;
+    padding: 2rem;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    width: 40%;
+    height: 45%;
+    position: relative;
+    transition: all 2s ease-in-out;
+    color: #000;
+  }
+
+  .popup .content1 {
+    max-height: 50rem;
+    overflow: auto;
+  }
+
+  /*******************************************/
+  /* pop-up per aggiunta utenti */
+  /*******************************************/
+  .popup.due {
+    margin: 10rem auto;
+    padding: 2rem;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    width: 60%;
+    height: 70%;
+    position: relative;
+    transition: all 2s ease-in-out;
+    color: #000;
+  }
+
+  /*******************************************/
+  /* sezione immagini - carosello */
+  /*******************************************/
+  .corpo-sez2 {
+    background-color: #f7ecde6c;
+    grid-column: 2 / -1;
+    grid-row: 3 / -1;
+    border-top: 1px solid #dee2e6;
+    padding-top: 15rem;
+    height: /*66rem*/ 100vh;
+    display: none;
+    margin-top: -8rem;
+  }
+
+  .carousel-container {
+    border-radius: 3rem;
+    overflow: hidden;
+    max-width: 80rem;
+    position: relative;
+    box-shadow: 0 0 3rem -2rem #223344;
+    margin: auto;
+    z-index: 0;
+  }
+}
+
+/* 550/16 =  34*/
+/* 550 * 442 - 87% - dimensione responsive - no throttling */
+@media only screen and (min-width: /*550px*/0px) and (max-width: 550px) {
+  body {
+    grid-template-columns: 0rem 55rem;
+    grid-template-rows: 5rem 8rem 1fr;
+    position: relative;
+  }
+
+  .nome-sezioni-lista-utenti {
+    display: none;
+  }
+
+  .bottone-aggiungi-utente {
+    background-color: green;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left: 35rem;
+    padding: 6px 10px;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .icona-piu {
+    font-size: 3rem;
+  }
+
+  .lista-utenti {
+    margin: 0 0;
+    padding: 10px;
+  }
+
+  .utente {
+    background-color: #fff;
+    padding: 2rem;
+    height: 14rem;
+    margin-bottom: 1rem;
+
+    /* display: flex; */
+    /* gap: 1rem; */
+    display: grid;
+    grid-template-columns: 10px 1fr 1fr 1fr;
+    column-gap: 2.1rem;
+
+    border-radius: 2rem;
+
+    cursor: pointer;
+  }
+
+  .icone-lista-utente {
+    display: flex;
+    justify-self: flex-end;
+  }
+
+  .div-bar-ricerca {
+    padding: 1.5rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icon-mobile-nav {
+    height: 3.8rem;
+    width: 3.8rem;
+    color: #333;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .menu-sx {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .icon-mobile-nav[name="close-outline"] {
+    display: none;
+  }
+
+  .menu {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 650px;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.5s ease-in;
+    opacity: 0;
+
+    pointer-events: none;
+    display: none;
+
+    visibility: hidden;
+
+    transform: translateX(100%);
+  }
+
+  .menu.nav-open {
+    opacity: 1;
+    display: block;
+
+    pointer-events: auto;
+    visibility: visible;
+
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  /* ************************************************/
+  /* popup info utente */
+  /* ********************************************* */
+
+  .popup {
+    background-color: #eaeaea;
+    border-radius: 5px;
+    width: 50rem;
+    height: 50rem;
+    position: relative;
+    transition: all 2s ease-in-out;
+    color: #000;
+  }
+
+  .popup .content1 {
+    max-height: 50rem;
+    overflow: auto;
+  }
+
+  .generale-popup {
+    background-color: #aa8b56;
+    padding: 1rem 5rem;
+    border-radius: 2rem;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .post-popup {
+    background-color: #aa8b56;
+    padding: 1rem 7rem;
+    border-radius: 2rem;
+    color: #000;
+    text-decoration: none;
+  }
+
+  /*******************************************/
+  /* sezione immagini - carosello */
+  /*******************************************/
+
+  .corpo-sez2 {
+    background-color: #f7ecde6c;
+    grid-column: 2 / -1;
+    grid-row: 3 / -1;
+    border-top: 1px solid #dee2e6;
+    padding-top: 2rem;
+
+    display: none;
+  }
+
+  .carousel-container {
+    border-radius: 3rem;
+    overflow: hidden;
+    max-width: 50rem;
+    position: relative;
+    box-shadow: 0 0 3rem -2rem #223344;
+    margin: auto;
+    z-index: 0;
+  }
+
+  .mySlides img {
+    display: block;
+    width: 52rem;
+    height: 45rem;
+  }
+
+  /*******************************************/
+  /* sezione post */
+  /*******************************************/
+
+  .corpo-sez3 {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .titolo-sezione {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .id-autore {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .profilo-autore-post {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  }
+
+  .post-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: initial;
+    align-items: flex-start;
+
+    max-height: 70rem;
+    max-width: 80rem;
+    background-color: #fff;
+    overflow-x: initial;
+
+    position: initial;
+
+    overflow: initial;
+  }
+
+  .post-card {
+    width: 55rem;
+    flex-basis: initial;
+  }
+
+  .post-card a {
+    color: inherit;
+    text-decoration: initial;
+    display: block;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #f7ecde6c;
+    border: 2px solid #000;
+    transition: all 0.1s ease-in-out;
+    position: initial;
+    top: 0px;
+    left: 0px;
+    cursor: pointer;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  .corpo-post {
+    font-size: 1.5rem;
+  }
+
+  .id-autore {
+    font-size: 1.5rem;
+  }
+}

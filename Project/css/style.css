@@ -1,0 +1,138 @@
+/*******************************************/
+/* stile generale */
+/*******************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #343a40;
+  font-size: 2.4rem;
+
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+  grid-template-rows: 5rem 8rem 1fr;
+
+  height: 100vh;
+}
+
+/*******************************************/
+/* barra in alto */
+/*******************************************/
+header {
+  padding-left: 1.5rem;
+  grid-column: 1 /-1;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.link-header {
+  text-decoration: none;
+  color: #000;
+}
+
+.icone-header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding-right: 1.5rem;
+}
+
+.link-refresh {
+  text-decoration: none;
+  color: #000;
+}
+
+/*******************************************/
+/* menu a sinistra */
+/*******************************************/
+.menu-sx {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.prima-voce.attivo {
+  border-left: 2px solid #000;
+}
+
+.seconda-voce.attivo {
+  border-left: 2px solid #000;
+}
+
+.terza-voce.attivo {
+  border-left: 2px solid #000;
+}
+
+.menu-sx li {
+  display: flex;
+  gap: 2rem;
+  padding-left: 1rem;
+  font-size: 2rem;
+}
+
+.menu-sx li:hover {
+  border-left: 2px solid #000;
+}
+
+.icona-men-sx {
+  align-self: center;
+}
+
+.link-sx {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu {
+  padding-top: 2.4rem;
+  padding-left: 1.5rem;
+  grid-row: 3 /-1;
+  background-color: #f7ecdee8;
+  border-top: 1px solid #dee2e6;
+}
+
+.img-profilo {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+nav {
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  background-color: #f7ecdebd;
+  grid-column: 1 /-1;
+  color: #000;
+}
+
+/*******************************************/
+/* sezione profilo utente */
+/*******************************************/
+.img {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.info-profilo {
+  display: inline-block;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.btn-mobile-nav {
+  display: none;
+}
